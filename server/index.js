@@ -77,32 +77,48 @@ let movies = [
 
 // GET /movies
 app.get("/movies", (req, res) => {
-  res.json(movies);
+  try {
+    res.json(movies);
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
 });
 
 // POST /movies
 app.post("/movies", (req, res) => {
-  const newMovie = req.body;
-  newMovie.id = movies.length + 1;
-  movies.push(newMovie);
-  res.status(201).json(newMovie);
+  try {
+    const newMovie = req.body;
+    newMovie.id = String(movies.length + 1); // Convert id to string
+    movies.push(newMovie);
+    res.status(201).json(newMovie);
+  } catch (error) {
+    res.status(400).json({ message: "Invalid data format" });
+  }
 });
 
 // DELETE /movies/:id
 app.delete("/movies/:id", (req, res) => {
-  const { id } = req.params;
-  movies = movies.filter((movie) => movie.id !== id);
-  res.json({ id });
+  try {
+    const { id } = req.params;
+    movies = movies.filter((movie) => movie.id !== id);
+    res.json({ id });
+  } catch (error) {
+    res.status(400).json({ message: "Invalid movie id" });
+  }
 });
 
 // PUT /movies/:id
 app.put("/movies/:id", (req, res) => {
-  const { id } = req.params;
-  const updatedMovie = req.body;
-  movies = movies.map((movie) =>
-    movie.id === id ? { ...movie, ...updatedMovie } : movie
-  );
-  res.json(updatedMovie);
+  try {
+    const { id } = req.params;
+    const updatedMovie = req.body;
+    movies = movies.map((movie) =>
+      movie.id === id ? { ...movie, ...updatedMovie } : movie
+    );
+    res.json(updatedMovie);
+  } catch (error) {
+    res.status(400).json({ message: "Invalid movie id or data format" });
+  }
 });
 
 // Run the server
