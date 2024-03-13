@@ -24,6 +24,7 @@ Backend :
 - Node.js
 - Express.js
 
+I chose to use React Contexts to do the request to get movies only one time in the app. It allows me get informations of every movies faster.
 
 
 ## Installation and Setup
