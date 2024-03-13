@@ -1,10 +1,13 @@
+/* Styles for larger screens (tablet) */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Container for backward navigation */
   .backwardSection {
     display: flex;
     margin-left: 30px;
     margin-top: 50px;
   }
 
+  /* Cover image styles */
   .coverImage {
     margin-top: 20px;
     height: 230px;
@@ -15,12 +18,15 @@
     border-bottom-right-radius: 25px;
   }
 
+  /* Thumbnail image for movie description */
   .movieDescriptionThumbnail {
     border-radius: 16px;
-    object-fit: fill;
+    object-fit: cover;
     height: 140px;
     width: 100px;
   }
+
+  /* Title of the movie */
   .movieTitle {
     margin-top: 90px;
     margin-left: 20px;
@@ -29,11 +35,13 @@
     width: 240px;
   }
 
+  /* Container for cover image and title */
   .coverAndTitleContainer {
     position: relative;
     margin-bottom: 80px;
   }
 
+  /* Container for thumbnail and title */
   .thumbnailAndTitle {
     position: absolute;
     margin-left: 35px;
@@ -43,6 +51,7 @@
     transform: translate(0%, 40%);
   }
 
+  /* Styles for movie data (date, duration, type) */
   .movieData {
     color: grey;
     font-size: 15px;
@@ -51,6 +60,7 @@
     margin-top: 0;
   }
 
+  /* Divider between movie data */
   .divider {
     display: inline-block;
     width: 1px;
@@ -60,12 +70,14 @@
     height: 1em;
   }
 
+  /* Solid horizontal line */
   hr.solid {
     background-color: #3a3f47;
     margin: 0;
     opacity: 0.5;
   }
 
+  /* Description of the movie */
   .description {
     font-size: 16px;
     margin-left: 35px;
@@ -74,14 +86,16 @@
   }
 }
 
-/* Styles pour iPhone 12 */
+/* Styles for iPhone 12 */
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  /* Container for backward navigation */
   .backwardSection {
     display: flex;
     margin-left: 30px;
     margin-top: 50px;
   }
 
+  /* Cover image styles */
   .coverImage {
     margin-top: 20px;
     height: 230px;
@@ -91,12 +105,15 @@
     border-bottom-right-radius: 25px;
   }
 
+  /* Thumbnail image for movie description */
   .movieDescriptionThumbnail {
     border-radius: 16px;
-    object-fit: fill;
+    object-fit: cover;
     height: 140px;
     width: 100px;
   }
+
+  /* Title of the movie */
   .movieTitle {
     margin-top: 90px;
     margin-left: 20px;
@@ -105,11 +122,13 @@
     width: 240px;
   }
 
+  /* Container for cover image and title */
   .coverAndTitleContainer {
     position: relative;
     margin-bottom: 80px;
   }
 
+  /* Container for thumbnail and title */
   .thumbnailAndTitle {
     position: absolute;
     margin-left: 35px;
@@ -119,6 +138,7 @@
     transform: translate(0%, 40%);
   }
 
+  /* Styles for movie data (date, duration, type) */
   .movieData {
     color: grey;
     font-size: 15px;
@@ -127,6 +147,7 @@
     margin-top: 0;
   }
 
+  /* Divider between movie data */
   .divider {
     display: inline-block;
     width: 1px;
@@ -136,12 +157,14 @@
     height: 1em;
   }
 
+  /* Solid horizontal line */
   hr.solid {
     background-color: #3a3f47;
     margin: 0;
     opacity: 0.5;
   }
 
+  /* Description of the movie */
   .description {
     font-size: 12px;
     margin-left: 35px;

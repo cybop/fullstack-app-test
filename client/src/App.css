@@ -1,35 +1,41 @@
+/* Styles for carousel title */
 .carouselTitle {
   font-weight: 600;
   margin-top: 42px;
   margin-left: 24px;
 }
 
+/* Styles for carousel container */
 .carousel {
   margin-left: 22px;
   margin-top: 30px;
 }
+
+/* Styles for movie thumbnail */
 .movieThumbnail {
   border-radius: 16px;
-  object-fit: fill;
+  object-fit: cover;
   height: 180px;
   width: 144.61px;
 }
 
+/* Styles for movie image container */
 .movieImageContainer {
   position: relative;
 }
+
+/* Styles for displaying movie ID */
 .displayID {
   position: absolute;
   bottom: 0;
   left: 0;
   transform: translate(-25%, 35%);
-  font-size: 160px;
-  -webkit-text-stroke-color: #0296e5;
-  -webkit-text-stroke-width: 0.5px;
+  font-size: 16px;
   color: #242a32;
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* Styles for other movie thumbnails */
 .otherMovie {
   border-radius: 16px;
   object-fit: cover;
@@ -37,59 +43,60 @@
   width: 100px;
   margin-right: 20px;
 }
+
+/* Styles for container of other movies */
 .otherMoviesContainer {
   margin-bottom: 130px;
   margin-left: 24px;
   margin-right: 24px;
 }
-/* Styles pour iPad */
+
+/* Styles for iPad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .movieImageContainer {
-    position: relative;
     margin-bottom: 70px;
   }
+
   .movieThumbnail {
-    border-radius: 16px;
-    object-fit: fill;
     height: 300px;
     width: auto;
   }
+
   .otherMoviesContainer {
-    display: grid; /* Utilisez un affichage en grille pour les iPad */
-    grid-template-columns: repeat(4, 1fr); /* Trois colonnes */
-    grid-gap: 20px; /* Espace entre les images */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
     margin-top: 30px;
   }
 
   .otherMovie {
-    width: 150px; /* Calculez la largeur en fonction de l'espace disponible */
-    height: 200px; /* Hauteur automatique pour maintenir les proportions */
-    margin-right: 0; /* Aucune marge à droite pour la dernière image de chaque ligne */
+    width: 150px;
+    height: 200px;
+    margin-right: 0;
   }
 }
 
-/* Styles pour iPhone 12 */
+/* Styles for iPhone 12 */
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
   .movieImageContainer {
-    position: relative;
     margin-bottom: 50px;
   }
+
   .movieThumbnail {
-    border-radius: 16px;
-    object-fit: fill;
     height: 250px;
     width: auto;
   }
+
   .otherMoviesContainer {
-    display: grid; /* Utilisez un affichage en grille pour les iPad */
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
-    grid-gap: 20px; /* Espace entre les images */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
     margin-top: 30px;
   }
 
   .otherMovie {
-    width: 150; /* Calculez la largeur en fonction de l'espace disponible */
-    height: 200; /* Hauteur automatique pour maintenir les proportions */
-    margin-right: 0; /* Aucune marge à droite pour la dernière image de chaque ligne */
+    width: 150px;
+    height: 200px;
+    margin-right: 0;
   }
 }
