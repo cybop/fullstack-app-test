@@ -39,7 +39,7 @@ git clone https://github.com/cybop/fullstack-app-test.git
 
 2. Navigate to the project directory:
 ```bash
-cd fullstack-app-test
+cd fullstack-app-test/client
 ```
 
 3. Install dependencies:
