@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import MovieDescription from './movies/MovieDescription';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { MovieProvider } from './movies/MoviesContext';
+import Home from './Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Test Fullstack
-        </a>
-      </header>
-    </div>
+    <Router>
+      <MovieProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies/:index" element={<MovieDescription />} />
+        </Routes>
+      </MovieProvider>
+    </Router>
   );
 }
 

@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+.carouselTitle {
+  font-weight: 600;
+  margin-top: 42px;
+  margin-left: 24px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel {
+  margin-left: 22px;
+  margin-top: 30px;
+}
+.movieThumbnail {
+  border-radius: 16px;
+  object-fit: fill;
+  height: 180px;
+  width: 144.61px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.movieImageContainer {
+  position: relative;
+}
+.displayID {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-25%, 35%);
+  font-size: 160px;
+  -webkit-text-stroke-color: #0296e5;
+  -webkit-text-stroke-width: 0.5px;
+  color: #242a32;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.otherMovie {
+  border-radius: 16px;
+  object-fit: cover;
+  height: 145px;
+  width: 100px;
+  margin-right: 20px;
+}
+.otherMoviesContainer {
+  margin-bottom: 130px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+/* Styles pour iPad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .movieImageContainer {
+    position: relative;
+    margin-bottom: 70px;
+  }
+  .movieThumbnail {
+    border-radius: 16px;
+    object-fit: fill;
+    height: 300px;
+    width: auto;
+  }
+  .otherMoviesContainer {
+    display: grid; /* Utilisez un affichage en grille pour les iPad */
+    grid-template-columns: repeat(4, 1fr); /* Trois colonnes */
+    grid-gap: 20px; /* Espace entre les images */
+    margin-top: 30px;
+  }
+
+  .otherMovie {
+    width: 150px; /* Calculez la largeur en fonction de l'espace disponible */
+    height: 200px; /* Hauteur automatique pour maintenir les proportions */
+    margin-right: 0; /* Aucune marge à droite pour la dernière image de chaque ligne */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Styles pour iPhone 12 */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  .movieImageContainer {
+    position: relative;
+    margin-bottom: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  .movieThumbnail {
+    border-radius: 16px;
+    object-fit: fill;
+    height: 250px;
+    width: auto;
+  }
+  .otherMoviesContainer {
+    display: grid; /* Utilisez un affichage en grille pour les iPad */
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+    grid-gap: 20px; /* Espace entre les images */
+    margin-top: 30px;
+  }
+
+  .otherMovie {
+    width: 150; /* Calculez la largeur en fonction de l'espace disponible */
+    height: 200; /* Hauteur automatique pour maintenir les proportions */
+    margin-right: 0; /* Aucune marge à droite pour la dernière image de chaque ligne */
   }
 }

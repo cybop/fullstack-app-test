@@ -1,0 +1,151 @@
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .backwardSection {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 50px;
+  }
+
+  .coverImage {
+    margin-top: 20px;
+    height: 230px;
+    object-view-box: inset(0% 0% 30% 0%);
+    object-fit: cover;
+    width: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .movieDescriptionThumbnail {
+    border-radius: 16px;
+    object-fit: fill;
+    height: 140px;
+    width: 100px;
+  }
+  .movieTitle {
+    margin-top: 90px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 240px;
+  }
+
+  .coverAndTitleContainer {
+    position: relative;
+    margin-bottom: 80px;
+  }
+
+  .thumbnailAndTitle {
+    position: absolute;
+    margin-left: 35px;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    transform: translate(0%, 40%);
+  }
+
+  .movieData {
+    color: grey;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-top: 0;
+  }
+
+  .divider {
+    display: inline-block;
+    width: 1px;
+    background-color: grey;
+    margin-top: 2.5px;
+    margin-left: 10px;
+    height: 1em;
+  }
+
+  hr.solid {
+    background-color: #3a3f47;
+    margin: 0;
+    opacity: 0.5;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-left: 35px;
+    margin-right: 30px;
+    text-align: start;
+  }
+}
+
+/* Styles pour iPhone 12 */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  .backwardSection {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 50px;
+  }
+
+  .coverImage {
+    margin-top: 20px;
+    height: 230px;
+    object-fit: cover;
+    width: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .movieDescriptionThumbnail {
+    border-radius: 16px;
+    object-fit: fill;
+    height: 140px;
+    width: 100px;
+  }
+  .movieTitle {
+    margin-top: 90px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 240px;
+  }
+
+  .coverAndTitleContainer {
+    position: relative;
+    margin-bottom: 80px;
+  }
+
+  .thumbnailAndTitle {
+    position: absolute;
+    margin-left: 35px;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    transform: translate(0%, 40%);
+  }
+
+  .movieData {
+    color: grey;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-top: 0;
+  }
+
+  .divider {
+    display: inline-block;
+    width: 1px;
+    background-color: grey;
+    margin-top: 2.5px;
+    margin-left: 10px;
+    height: 1em;
+  }
+
+  hr.solid {
+    background-color: #3a3f47;
+    margin: 0;
+    opacity: 0.5;
+  }
+
+  .description {
+    font-size: 12px;
+    margin-left: 35px;
+    margin-right: 30px;
+    text-align: start;
+  }
+}
